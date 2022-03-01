@@ -1,0 +1,80 @@
+*  Generated for: PrimeSim
+*  Design library name: mine
+*  Design cell name: tb_Neuron
+*  Design view name: schematic
+.lib 'saed32nm.lib' TT
+
+*Custom Compiler Version S-2021.09
+*Tue Mar  1 17:04:54 2022
+
+.global gnd!
+********************************************************************************
+* Library          : mine
+* Cell             : Neuron
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+.subckt neuron vdd in vad vau vk vr vss vth vw
+xm6 net31 in vth vth n105 w=0.26u l=0.260u nf=1 m=1
+xm5 net42 net40 vss vss n105 w=0.260u l=0.260u nf=1 m=1
+xm4 vss vad net53 vss n105 w=0.260u l=0.260u nf=1 m=1
+xm3 vss vr net51 vss n105 w=0.26u l=0.260u nf=1 m=1
+xm2 vss net51 in vss n105 w=0.26u l=0.260u nf=1 m=1
+xm1 vss net53 in vss n105 w=0.26u l=0.260u nf=1 m=1
+xm0 in vk vss vss n105 w=0.26u l=0.260u nf=1 m=1
+xm11 net53 vau net42 net42 p105 w=0.26u l=0.260u nf=1 m=1
+xm10 net51 vw net42 net42 p105 w=0.26u l=0.260u nf=1 m=1
+xm9 net42 net40 vdd vdd p105 w=0.8u l=260n nf=1 m=1
+xm8 in net40 vdd vdd p105 w=0.26u l=0.260u nf=1 m=1
+xm7 net31 net40 vdd vdd p105 w=0.26u l=0.260u nf=1 m=1
+c14 net53 vss c=100f
+c13 net51 vss c=30f
+c12 in vss c=50f
+.ends neuron
+
+********************************************************************************
+* Library          : mine
+* Cell             : tb_Neuron
+* View             : schematic
+* View Search List : hspice hspiceD schematic spice veriloga
+* View Stop List   : hspice hspiceD
+********************************************************************************
+xi0 net12 vin net26 net25 net17 net21 gnd! net15 net19 neuron
+v9 net26 gnd! dc=0.003
+v8 net25 gnd! dc=0.28
+v7 net21 gnd! dc=0.12
+v6 net19 gnd! dc=0.08
+v5 net17 gnd! dc=0.03
+v3 net12 gnd! dc=0.3
+v4 net15 gnd! dc=0.05
+i10 gnd! vin dc=20p
+
+
+
+
+
+
+
+
+.tran '0.1m' '20m' name=tran
+
+.option primesim_remove_probe_prefix = 0
+.probe v(*) i(*) level=1
+.probe tran v(vin)
+
+.temp 25
+
+
+
+.option primesim_output=wdf
+
+
+.option parhier = LOCAL
+
+
+
+
+
+
+.end

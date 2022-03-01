@@ -63,7 +63,7 @@ After creating and saving the schematic go to 'Tools' and open 'Primewave' to st
 One other thing we need to keep in mind is that here we have loop for which an initial condition needs to be declared. For that, we have to go to 'Setup -> Convergance aids' and select the net for which we want to set an initial condition.Then go to 'Simulations -> Netlist and Run' to generate a netlist and run the simulation to get the below output.
 <p align="center">
   <img src="Images/output.png"></br>
-  Fig. 5: Neuron Transient Analysis
+  Fig. 4: Neuron Transient Analysis
 </p>
 
 

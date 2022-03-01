@@ -44,7 +44,7 @@ Initially Schematic of the Neuron was implemented and converted into a symbol.
   Fig. 1: Neuron Schematic
 </p>
 <p align="center">
-  <img src="Images/Symbol_tb.png"></br>
+  <img src="Images/Symbol.png"></br>
   Fig. 2: Neuron Symbol
 </p>
 

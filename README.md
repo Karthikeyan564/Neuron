@@ -40,11 +40,11 @@ The Reference circuit basically implements the spiking behavior in neurons. The 
 ### Neuron :
 Initially Schematic of the Neuron was implemented and converted into a symbol.
 <p align="center">
-  <img src="Images/schematic.png"></br>
+  <img src="Images/Schematic.png"></br>
   Fig. 1: Neuron Schematic
 </p>
 <p align="center">
-  <img src="Images/symbol.png"></br>
+  <img src="Images/Symbol_tb.png"></br>
   Fig. 2: Neuron Symbol
 </p>
 
@@ -55,11 +55,6 @@ A testbench was designed for testing the neuron.
   <img src="Images/Symbol_tb.png"></br>
   Fig. 3: Testbench Schematic
 </p>
-<p align="center">
-  <img src="Images/buffer_symbol.png"></br>
-  Fig. 4: Buffer Symbol
-</p>
-
 
 
 ## Simulations:
@@ -70,7 +65,6 @@ One other thing we need to keep in mind is that here we have loop for which an i
   <img src="Images/output.png"></br>
   Fig. 5: Neuron Transient Analysis
 </p>
-
 
 
 # Netlist of the Circuit:
